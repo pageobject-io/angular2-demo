@@ -7,7 +7,13 @@ import {Page} from "./page";
 @Injectable()
 export class PartRepository {
 
-    private _parts: Part[] = [new Part(1, "First part", "123-234-456-A", "eBay", "http://www.example.com", "https://s-media-cache-ak0.pinimg.com/originals/15/ed/a3/15eda3e5e0c9b5a2cf12957d310659a6.jpg", false, null, 15000),
+    private _parts: Part[] = [
+        new Part(1, "Porsche alloy wheel", "123-234-456-A", "vwheritage",
+                    "https://www.vwheritage.com/shop/bay-bus/AC601002BP/wheel-ssp-brm-black-polished-5-205-5-x15-et14/?crumbStartPage=1&crumbStartRow=1",
+                    "https://d2m4kcr6k6fa8s.cloudfront.net/_img/products/33156921/0727560B-6905-448C-BC2F-B801703874BE.jpg",
+                    false,
+                    null,
+                    36058),
         new Part(2, "First part", "123-234-456-A", "eBay", "http://www.example.com", "https://s-media-cache-ak0.pinimg.com/originals/15/ed/a3/15eda3e5e0c9b5a2cf12957d310659a6.jpg", false, null, 15000),
         new Part(3, "First part", "123-234-456-A", "eBay", "http://www.example.com", "http://images.thesamba.com/vw/gallery/pix/490560.jpg", false, null, 15000),
         new Part(4, "First part", "123-234-456-A", "eBay", "http://www.example.com", "https://s-media-cache-ak0.pinimg.com/originals/15/ed/a3/15eda3e5e0c9b5a2cf12957d310659a6.jpg", false, null, 15000),

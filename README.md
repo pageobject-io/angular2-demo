@@ -9,8 +9,9 @@ This project was generated with [angular-cli](https://github.com/angular/angular
   ```
   npm install -g angular-cli@latest
   ```
+3. Run `npm install` to install all dependencies
 
-3. Run `ng serve` for a dev server
+4. Run `ng serve` for a dev server
 
-4. Navigate to `http://localhost:4200/`
+5. Navigate to `http://localhost:4200/`
 
