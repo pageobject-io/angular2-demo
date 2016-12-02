@@ -6,7 +6,7 @@
     <div class="col-md-12">
         <span id="totalCountLabel">You have {{totalCount}} parts on your list.</span>
         <button (click)="addPart()" class="btn btn-default pull-right">Add</button>
-        <table class="table table-bordered table-striped">
+        <table id="parts-table" class="table table-bordered table-striped">
             <thead>
             <tr>
                 <th class="text-center" style="width: 100px">ID</th>
@@ -15,12 +15,12 @@
                 <th>Webshop</th>
                 <th class="text-center">Have it?</th>
                 <th>Purchase date</th>
-                <th class="text-center">Price (EUR)</th>
+                <th class="text-center">Price (HUF)</th>
                 <th class="text-center" style="width: 100px">Actions</th>
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let part of parts">
+            <tr class="part-row" *ngFor="let part of parts">
                 <td class="vert-align text-center">{{part.id}}</td>
                 <td class="vert-align">{{part.partName}}</td>
                 <td class="vert-align text-center">{{part.vwOemNumber}}</td>
@@ -29,8 +29,10 @@
                 <td class="vert-align text-center">{{part.purchaseDate}}</td>
                 <td class="vert-align text-center">{{part.price}}</td>
                 <td class="text-center">
-                    <button class="btn btn-default btn-sm" (click)="editPart(part)"><i class="fa fa-edit"></i></button>
-                    <button class="btn btn-default btn-sm" (click)="deletePart(part)"><i class="fa fa-trash-o"></i>
+                    <button title="Edit part" class="btn btn-default btn-sm" (click)="editPart(part)"><i
+                            class="fa fa-edit"></i></button>
+                    <button title="Delete part" class="btn btn-default btn-sm" (click)="deletePart(part)"><i
+                            class="fa fa-trash-o"></i>
                     </button>
                 </td>
             </tr>
@@ -38,16 +40,16 @@
         </table>
         <nav>
             <ul class="pagination">
-                <li [ngClass]="{'disabled': currentPage == 1}">
-                    <a href (click)="goToPreviousPage($event)">
+                <li class="first-page" [ngClass]="{'disabled': currentPage == 1}">
+                    <a title="Previous page" href (click)="goToPreviousPage($event)">
                         <span>&laquo;</span>
                     </a>
                 </li>
-                <li *ngFor="let page of pages()" [ngClass]="{'active': currentPage == page}"><a href
+                <li class="page-link" *ngFor="let page of pages()" [ngClass]="{'active': currentPage == page}"><a href
                                                                                                 (click)="goToPage(page, $event)">{{page}}</a>
                 </li>
-                <li [ngClass]="{'disabled': currentPage == lastPage()}">
-                    <a href (click)="goToNextPage($event)">
+                <li class="last-page" [ngClass]="{'disabled': currentPage == lastPage()}">
+                    <a title="Next page" href (click)="goToNextPage($event)">
                         <span>&raquo;</span>
                     </a>
                 </li>
