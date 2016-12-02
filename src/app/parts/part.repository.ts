@@ -16,7 +16,7 @@ export class PartRepository {
                     36058),
         new Part(2, "Front suspension", "567-987-567", "Justkampers", 
             "http://www.example.com", 
-            "https://s-media-cache-ak0.pinimg.com/originals/15/ed/a3/15eda3e5e0c9b5a2cf12957d310659a6.jpg", 
+            "http://www.justkampers.com/media/catalog/product/cache/1/image/800x400/565c3eaef733270ddeba43bc3f80484c/J/1/J11279-0_4.jpg", 
             false,
             null, 
             32000),
